@@ -24,7 +24,7 @@ if(isset($_POST['login'])){
         $user = $result->fetch_assoc();
         if(password_verify($password,$user['password'])){
             $_SESSION['name'] = $user['name'];
-            $_SESSION['name'] = $user['email'];
+            $_SESSION['email'] = $user['email'];
             if($user['role']=='admin'){
                 header("Location: admin_page.php");
             }else{

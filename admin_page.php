@@ -1,14 +1,14 @@
 <?php
-session_abort();
+session_start();
 if(!isset($_SESSION['email'])){
-    header('Location: login.php');
+    header("Location: login.php");
     exit();
 }
 ?>
 <html>
     <head>
         <title>Admin Page</title>
-        <link href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body style="background: #fff;">
         <div class="box">
